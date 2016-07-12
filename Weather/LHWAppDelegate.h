@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "City.h"
+
 
 @interface LHWAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @end
+
+
+

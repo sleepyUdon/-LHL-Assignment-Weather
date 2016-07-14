@@ -114,9 +114,8 @@
 
     UIButton *detailedView = [[UIButton alloc]initWithFrame:CGRectZero];
     [detailedView setTitle:@"Details" forState:UIControlStateNormal];
-    detailedView.userInteractionEnabled = YES;
     [self.view addSubview:detailedView];
-    detailedView.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+//    detailedView.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
 
     detailedView.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -162,18 +161,16 @@
     }
 
 
-- (void) showWeatherDetails:(City*)city {
-    NSLog(@"ok");
+- (void) showWeatherDetails:(UIButton*)sender {
+    
     DetailedViewController* detailedViewController = [[DetailedViewController alloc]init];
     
-    detailedViewController.cityDetails = city;
+    
+    detailedViewController.cityDetails = self.city;
     
     [self.navigationController pushViewController:detailedViewController animated:YES];
     
     
 }
-
-
-
 
 @end

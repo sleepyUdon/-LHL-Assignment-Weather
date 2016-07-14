@@ -14,30 +14,26 @@
 
 - (void)viewDidLoad {
     
-    
-    UILabel *cityCurrentTime = [[UILabel alloc]initWithFrame:CGRectMake(150, 250, 200, 100)];
+    UILabel *cityCurrentTime = [[UILabel alloc]initWithFrame:CGRectMake(50, 250, 200, 100)];
     
     cityCurrentTime.textColor = [UIColor whiteColor];
-    cityCurrentTime.text = self.cityDetails.currentTime;
-    
+    cityCurrentTime.text =  [NSString stringWithFormat:(@"Time: %@"), self.cityDetails.currentTime];
     [self.view addSubview:cityCurrentTime];
     
     
 
-    UILabel *cityCurrentTemperature = [[UILabel alloc]initWithFrame:CGRectMake(150, 400, 200, 100)];
+    UILabel *cityCurrentTemperature = [[UILabel alloc]initWithFrame:CGRectMake(50, 300, 200, 100)];
     
     cityCurrentTemperature.textColor = [UIColor whiteColor];
-    cityCurrentTemperature.text = self.cityDetails.currentTemperature;
-    
+    cityCurrentTemperature.text =  [NSString stringWithFormat:(@"Temperature: %@"), self.cityDetails.currentTemperature];
     [self.view addSubview:cityCurrentTemperature];
     
     
 
-    UILabel *cityCurrentPrecipitation = [[UILabel alloc]initWithFrame:CGRectMake(150, 600, 200, 100)];
+    UILabel *cityCurrentPrecipitation = [[UILabel alloc]initWithFrame:CGRectMake(50, 350, 400, 100)];
     
     cityCurrentPrecipitation.textColor = [UIColor whiteColor];
-    cityCurrentPrecipitation.text = self.cityDetails.chanceOfPrecipitation;
-    
+    cityCurrentPrecipitation.text =  [NSString stringWithFormat:(@"Chance of Precipitation: %@"), self.cityDetails.chanceOfPrecipitation];
     [self.view addSubview:cityCurrentPrecipitation];
 
     

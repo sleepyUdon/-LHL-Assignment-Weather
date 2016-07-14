@@ -84,11 +84,20 @@
     
     amsterdamViewController.title= amsterdamViewController.city.CityName;
     
+    // make 5 instances of the NavigationController
+    
+    UINavigationController *torontoNavigationController = [[UINavigationController alloc] initWithRootViewController:torontoViewController];
+    UINavigationController *vancouverNavigationController = [[UINavigationController alloc] initWithRootViewController:vancouverViewController];
+    UINavigationController *brusselsNavigationController = [[UINavigationController alloc] initWithRootViewController:brusselsViewController];
+    UINavigationController *belgradeNavigationController = [[UINavigationController alloc] initWithRootViewController:belgradeViewController];
+    UINavigationController *amsterdamNavigationController = [[UINavigationController alloc] initWithRootViewController:amsterdamViewController];
     
 
     // create tab controllers
     
-    tabBarController.viewControllers = @[torontoViewController, vancouverViewController, brusselsViewController, belgradeViewController, amsterdamViewController];
+    
+    
+    tabBarController.viewControllers = @[torontoNavigationController, vancouverNavigationController, brusselsNavigationController, belgradeNavigationController, amsterdamNavigationController];
     
     [self.window makeKeyAndVisible];
     return YES;
